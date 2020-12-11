@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 import dj_database_url
+import django_heroku
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -139,6 +140,7 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+django_heroku.settings(locals())
 
 # Email teste console
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -155,3 +157,4 @@ DEFAULT_FROM_EMAIL = 'contato@fusion.com.br'
 """
 
 LOGOUT_REDIRECT_URL = 'index'
+
